@@ -26,7 +26,7 @@ public class AirLineCount {
     job.setReducerClass(AirLineReduce.class);
     job.setInputFormatClass(TextInputFormat.class);
     job.setOutputFormatClass(TextOutputFormat.class);
-    job.setNumReduceTasks(2);
+    job.setNumReduceTasks(3);
     FileInputFormat.addInputPath(job, new Path(args[0]));
     FileOutputFormat.setOutputPath(job, new Path(args[1]));
     job.waitForCompletion(true);
