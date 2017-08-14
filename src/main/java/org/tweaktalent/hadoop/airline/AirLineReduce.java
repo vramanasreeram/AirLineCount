@@ -12,7 +12,7 @@ public class AirLineReduce extends Reducer<Text,IntWritable,Text,IntWritable> {
 		
 		int sum =0;
 		for(IntWritable value:values) {
-			System.out.println("Key:"+ key.toString() + " Values:"+values.toString());
+			System.out.println("Key:"+ key.toString() + " Values:"+value.get());
 			sum+= value.get();
 		}
 		context.write(key, new IntWritable(sum));
