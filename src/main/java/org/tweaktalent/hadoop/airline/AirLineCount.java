@@ -26,11 +26,11 @@ public class AirLineCount {
     job.setReducerClass(AirLineReduce.class);
     job.setInputFormatClass(TextInputFormat.class);
     job.setOutputFormatClass(TextOutputFormat.class);
-    job.setNumReduceTasks(0);
+    job.setNumReduceTasks(1);
     FileInputFormat.addInputPath(job, new Path(args[0]));
     FileOutputFormat.setOutputPath(job, new Path(args[1]));
-    job.waitForCompletion(true);
-
+//    job.waitForCompletion(true);
+    job.submit();
 	}
 
 }
