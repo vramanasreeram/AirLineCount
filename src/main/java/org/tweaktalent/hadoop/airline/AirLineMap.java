@@ -14,7 +14,7 @@ public class AirLineMap extends Mapper<LongWritable,Text,Text,IntWritable>{
 		
 		String[] words = value.toString().split(",");
 		if(words[0].equalsIgnoreCase("2008")) {
-			if(words[17].equalsIgnoreCase("BWI"))
+			if(words[17].equalsIgnoreCase("BHM"))
 			{
 			context.write(new Text(words[17]),new IntWritable(1));
 		}
