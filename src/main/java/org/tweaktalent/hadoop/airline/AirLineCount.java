@@ -23,7 +23,8 @@ public class AirLineCount {
     job.setOutputKeyClass(Text.class);
     job.setOutputValueClass(IntWritable.class);
     job.setMapperClass(AirLineMap.class);
-    job.setReducerClass(AirLineReduce.class);
+    //job.setReducerClass(AirLineReduce.class);
+    job.setPartitionerClass(AirLinePartitioner.class);
     job.setInputFormatClass(TextInputFormat.class);
     job.setOutputFormatClass(TextOutputFormat.class);
     job.setNumReduceTasks(1);
