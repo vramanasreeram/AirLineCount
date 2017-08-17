@@ -1,3 +1,4 @@
 org\tweaktalent\hadoop\airline\AirLineMap.class
 org\tweaktalent\hadoop\airline\AirLineReduce.class
+org\tweaktalent\hadoop\airline\AirLinePartitioner.class
 org\tweaktalent\hadoop\airline\AirLineCount.class
