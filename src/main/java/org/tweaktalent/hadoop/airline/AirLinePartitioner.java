@@ -11,7 +11,7 @@ public class AirLinePartitioner extends Partitioner<Text,IntWritable> {
 	@Override
 	public int getPartition(Text key, IntWritable value, int numOfReduceTasks) {
 		// TODO Auto-generated method stub
-		String[] words = value.toString().split(",");
+		String[] words = value.toString().split("\t");
 		int age=Integer.parseInt(words[2]);
 		       if(age<=20)
 				{

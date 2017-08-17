@@ -16,19 +16,19 @@ public class AirLineMap extends Mapper<LongWritable,Text,Text,IntWritable>{
 	public void map(LongWritable key,Text value,Context context) throws IOException, InterruptedException {
 	//public void map(IntWritable key,Text value,Context context) throws IOException, InterruptedException {
 		
-		//String[] words = value.toString().split(",");
+		String[] words = value.toString().split("\t");
 		//if(words[0].equalsIgnoreCase("2008")) {
 			//if(words[17].equalsIgnoreCase("BHM")|| words[17].equalsIgnoreCase("BNA")||words[17].equalsIgnoreCase("cec"))
 			//{
-			//context.write(new Text(words[0]),new IntWritable(1));
+			context.write(new Text(words[2]),new IntWritable(1));
 		//}
 	//}
 		
-		String line = value.toString();
-        StringTokenizer tokenizer = new StringTokenizer(line);
-        while (tokenizer.hasMoreTokens()) {
-            word.set(tokenizer.nextToken());
-            context.write(word, one);
-        }
+		//String line = value.toString();
+       // StringTokenizer tokenizer = new StringTokenizer(line);
+        //while (tokenizer.hasMoreTokens()) {
+         //   word.set(tokenizer.nextToken());
+          //  context.write(word, one);
+       // }
 	}
 }
