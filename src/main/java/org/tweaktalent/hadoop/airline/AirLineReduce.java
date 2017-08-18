@@ -31,7 +31,7 @@ public class AirLineReduce extends Reducer<IntWritable,Text,NullWritable,Text>{
 		int maxMarks = Integer.MIN_VALUE;
 		Text val = new Text();
 		for(Text value:values){
-			int marks = Integer.parseInt(value.toString().split(",")[2]);
+			int marks = Integer.parseInt(value.toString().split("\t")[2]);
 			logger.info("Marks:"+marks);
 			if(marks > maxMarks){
 				maxMarks = marks;
