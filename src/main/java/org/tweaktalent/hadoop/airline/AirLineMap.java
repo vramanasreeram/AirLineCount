@@ -38,7 +38,7 @@ public class AirLineMap extends Mapper<LongWritable,Text,IntWritable,Text>{
 		
 		// Name,age,gender,marks
 		String[] words = value.toString().split(",");
-		int age = Integer.parseInt(words[1]);
+		int age = Integer.parseInt(words[2]);
 		logger.info("Key:"+age+" Value:"+value);
 		context.write(new IntWritable(age), value);
 }
